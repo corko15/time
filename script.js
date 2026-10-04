@@ -21,7 +21,7 @@ async function requestWakeLock() {
             wakeLock = null;
         });
     } catch(e) {
-        popupText(3, `${text.name}: ${text.message}`);
+        popupText(3, `${e.name}: ${e.message}`);
     }
 }
 async function releaseWakeLock() {
@@ -37,7 +37,7 @@ async function syncTime() {
         timeOffset = data.unix_ms - Date.now();
         popupText(2, `System misalignment: ${timeOffset}ms`);
     } catch(e) {
-        popupText(3, `${text.name}: ${text.message}`);
+        popupText(3, `${e.name}: ${e.message}`);
     }
 }
 function createMinute() {
@@ -119,7 +119,7 @@ document.body.addEventListener("click", async () => {
             });
         }
     } catch(e) {
-        popupText(3, `${text.name}: ${text.message}`);
+        popupText(3, `${e.name}: ${e.message}`);
     }
 });
 (() => {
@@ -137,7 +137,7 @@ document.body.addEventListener("click", async () => {
         });
         resetCursorTimer();
     } catch(e) {
-        popupText(3, `${text.name}: ${text.message}`);
+        popupText(3, `${e.name}: ${e.message}`);
     }
 })();
 

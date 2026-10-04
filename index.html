@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png" type="icon/png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/apple_touch_icon.png">
+</head>
+<body>
+    <div class="start_scale time" style="--delay: 0;">
+        <div id="timeClass">
+            <div class="border_shadow"></div>
+            <div class="time_border"></div>
+            <div class="bg_overflow">
+            </div>
+            <div id="clock">
+                <div class="start_scale" style="--delay: 7;">
+                    <img id="hourHand" src="images/hourHand.svg">
+                </div>
+                <div class="start_scale" style="--delay: 6.5;">
+                    <img id="minHand" src="images/minHand.svg">
+                </div>
+                <div class="start_scale" style="--delay: 6;">
+                    <img id="secHand" src="images/secHand.svg">
+                </div>
+            </div>
+            <div class="clock_center"></div>
+            <div class="time_border_time"></div>
+            <h1 id="time" class="start_scale" style="--delay: 1;"></h1>
+        </div>
+    </div>
+    <div id="popup"></div>
+    <script src="script.js"></script>
+</body>
+</html>
